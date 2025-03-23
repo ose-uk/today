@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link href="./css/main.css" rel="stylesheet" />
+    <link href="./css/common.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="./js/main.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <header class="header">
+        <div class="headerInner">
+            <h1 class="font-roboto fw500">
+                <img src="img/logo.svg" alt="今日を知るサイト『TODAY』">
+            </h1>
+            <!-- <span class="fs18">今日は何の日？</span> -->
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="mainInner">
+
+            <!-- 基本情報 -->
+            <div class="mainContents tdyBasic">
+
+                <div class="mainColumn">
+                    <!-- 西暦-->
+                    <div class="mainBlock">
+                        <h2>西暦</h2>
+                        <div class="mainBody tdyLargeInfo tdyWesternYear">
+                            <div class="fs56 mr8 font-roboto fw500" id="westernyear"></div>
+                            <div class="lh2dot8">年</div>
+                            <div class="fs56 ml8 mr8 font-roboto fw500 month"></div>
+                            <div class="lh2dot8">月</div>
+                            <div class="fs56 ml8 mr8 font-roboto fw500 day"></div>
+                            <div class="lh2dot8">日</div>
+                          </div>
+                          <div class="tdyDayCounter fwnormal fs12">
+                            <span id="nextyear"></span>年まで残り<span class="fs16 fw500 font-roboto" id="daysRemaining"></span>日
+                          </div>
+                    </div>
+
+                    <div class="column2">
+                        <!-- 曜日 -->
+                        <div class="mainBlock">
+                            <h2>曜日</h2>
+                            <div class="mainBody tdyLargeInfo">
+                                <span class="fs40" id="dayofweek"></span>
+                            </div>
+                        </div>
+
+                        <!-- 六曜 -->
+                        <div class="mainBlock">
+                            <h2>六曜</h2>
+                            <div class="mainBody tdyLargeInfo">
+                                <span class="fs40" id="rokuyou"></span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- 和暦 -->
+                    <div class="mainBlock">
+                        <h2>和暦</h2>
+                        <div class="mainBody tdyLargeInfo tdyJapaneseYear">
+                            <div class="fs40" id="era">令和</div>
+                            <div class="fs56 ml8 mr8 font-roboto fw500" id="japaneseYear"></div>
+                            <div class="lh2dot8">年</div>
+                            <div class="fs56 ml8 mr8 font-roboto fw500 month"></div>
+                            <div class="lh2dot8">月</div>
+                            <div class="fs56 ml8 mr8 font-roboto fw500 day"></div>
+                            <div class="lh2dot8">日</div>
+                        </div>
+                    </div>
+
+                    <!-- 祝日 -->
+                    <div class="mainBlock">
+                        <h2>祝日</h2>
+                        <div class="mainBody tdyLargeInfo">
+                            <span class="fs40" id="holiday"></span>
+                        </div>
+                    </div>
+
+                    <!-- 今日は何の日 -->
+                    <div class="mainBlock">
+                        <h2>今日は何の日</h2>
+                        <div class="mainBody tdyMediumBody tdyWhatDay">
+                            <ul id="whatday">
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="row2">
+                        <!-- 今日の誕生花 -->
+                        <div class="mainBlock">
+                            <h2>今日の花言葉</h2>
+                            <div class="mainBody tdyMediumBody tdyFlower">
+                                <p class="fs20" id="flower"></p>
+                                <p class="fs16">花言葉：<span id="languageofflowers"></span></p>
+                            </div>
+                        </div>
+
+                        <!-- 月齢 -->
+                        <div class="mainBlock">
+                            <h2>今日の月</h2>
+                            <div class="mainBody tdyMediumBody tdyMoon">
+                                <span class="fs20" id="moonPhase"></span>
+                                <img id="moonImage" width="60" src="" />
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- SNS -->
+            <div class="snsContents">
+                <div class="snsHeader"><p>今日のことを共有しよう</p></div>
+                <div class="snsButtons fwnormal fs11">
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL" target="_blank">
+                        <button class="snsButton fbButton">
+                            <div class="snsLabel">
+                                <img src="./img/fblogo.png" width="18" height="18">
+                                    <span>シェアする</span>
+                            </div>
+                        </button>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?url=YOUR_URL&text=YOUR_TEXT" target="_blank">
+                        <button class="snsButton tweetButton">
+                            <div class="snsLabel">
+                                <img src="./img/xlogo.png" width="15" height="15">
+                                    <span>ポストする</span>
+                            </div>
+                        </button>
+                    </a>
+                    <a href="https://line.me/R/msg/text/?YOUR_TEXT%20YOUR_URL" target="_blank">
+                        <button class="snsButton lineButton">
+                            <div class="snsLabel">
+                                <img src="./img/snslogo.png" width="18" height="18">
+                                    <span>LINEに送る</span>
+                            </div>
+                        </button>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <!-- <div class="footerInner">
+            <p class="footerCopyright fs12">Copyright© unitedsynthesizer All Rights Reserved.</p>
+        </div> -->
+    </footer>
+</body>
+</html>
