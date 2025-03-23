@@ -99,11 +99,29 @@ $(document).ready(function () {
         }
     });
     loadCSV(whatdayCsvUrl, function (csvData) {
+        const year = now.getFullYear();
+        const month = now.getMonth() + 1;
+        const day = now.getDate();
+        const dayIndex = now.getDay();
+        
         const specialDays = getSpecialDays(csvData, now);
+
         // 配列をループして<li>を生成し<ul>に追加
         specialDays.forEach(function (day) {
             $('#whatday').append(`<li>${day}</li>`);
         });
+
+        const rawBody = `今日は${year}年${month}月${day}日の${daysOfWeek[dayIndex]}『${specialDays[0]}』です。
+
+https://us-naishin.com/today/`;
+
+        const lineBody = encodeURIComponent(rawBody);
+        const xBody = encodeURIComponent(rawBody + ' #今日を知るサイトTODAY');
+        const facebookLink = encodeURIComponent('https://us-naishin.com/today/');
+
+        $('#facebookLink').attr('href', `https://www.facebook.com/sharer/sharer.php?u=${facebookLink}`);
+        $('#xLink').attr('href', `https://twitter.com/intent/tweet?text=${xBody}`);
+        $('#lineLink').attr('href', `https://line.me/R/msg/text/?${lineBody}`);
     });
 });
 

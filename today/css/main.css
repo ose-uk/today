@@ -70,6 +70,11 @@ body {
   margin-left: 20px;
   text-align: left;
 }
+@media (max-width: 744px) {
+  .header {
+    text-align: center;
+  }
+}
 .headerInner > * {
   margin: 0;
 }
@@ -118,6 +123,11 @@ body {
     grid-template-columns: 1fr;
   }
 }
+@media (max-width: 744px) {
+  .mainColumn {
+    gap: 24px 0;
+  }
+}
 
 .column2 {
   display: flex;
@@ -147,7 +157,8 @@ body {
 }
 @media (max-width: 744px) {
   .mainBlock > h2 {
-    font-size: 16px;
+    font-size: 13px;
+    margin: 0 0 6px 0;
   }
 }
 .mainBlock .mainBody {
@@ -162,12 +173,20 @@ body {
 }
 @media (max-width: 744px) {
   .mainBlock .mainBody.tdyLargeInfo {
-    font-size: 24px;
+    height: 38px;
+    font-size: 18px;
+    line-height: 32px;
+    padding: 0 16px;
   }
 }
 .mainBlock .mainBody.tdyLargeInfo.tdyWesternYear {
-  display: flex;
+  margin: 0;
   line-height: 80px;
+}
+@media (max-width: 744px) {
+  .mainBlock .mainBody.tdyLargeInfo.tdyWesternYear {
+    line-height: 40px;
+  }
 }
 .mainBlock .mainBody.tdyLargeInfo.tdyWesternYear + .tdyDayCounter {
   text-align: right;
@@ -178,8 +197,13 @@ body {
   transform: translate(0, 100%);
 }
 .mainBlock .mainBody.tdyLargeInfo.tdyJapaneseYear {
-  display: flex;
+  margin: 0;
   line-height: 80px;
+}
+@media (max-width: 744px) {
+  .mainBlock .mainBody.tdyLargeInfo.tdyJapaneseYear {
+    line-height: 40px;
+  }
 }
 .mainBlock .mainBody.tdyMediumBody {
   border-radius: 4px;
@@ -188,12 +212,27 @@ body {
   padding: 20px 0;
   height: 100%;
 }
+@media (max-width: 744px) {
+  .mainBlock .mainBody.tdyMediumBody.tdyWhatDay {
+    padding: 12px 0;
+  }
+}
 .mainBlock .mainBody.tdyMediumBody.tdyWhatDay > ul {
   padding-left: 52px;
   margin: 0;
 }
+@media (max-width: 744px) {
+  .mainBlock .mainBody.tdyMediumBody.tdyWhatDay > ul {
+    padding-left: 40px;
+  }
+}
 .mainBlock .mainBody.tdyMediumBody.tdyFlower {
   padding: 23px;
+}
+@media (max-width: 744px) {
+  .mainBlock .mainBody.tdyMediumBody.tdyFlower {
+    padding: 12px 16px;
+  }
 }
 .mainBlock .mainBody.tdyMediumBody.tdyFlower > p {
   margin: 0;
@@ -201,11 +240,21 @@ body {
 .mainBlock .mainBody.tdyMediumBody.tdyFlower > p:nth-child(2) {
   margin-top: 12px;
 }
+@media (max-width: 744px) {
+  .mainBlock .mainBody.tdyMediumBody.tdyFlower > p:nth-child(2) {
+    margin-top: 6px;
+  }
+}
 .mainBlock .mainBody.tdyMediumBody.tdyMoon {
   padding: 30px 23px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+}
+@media (max-width: 744px) {
+  .mainBlock .mainBody.tdyMediumBody.tdyMoon {
+    padding: 12px 16px;
+  }
 }
 
 .snsContents {
@@ -270,25 +319,42 @@ body {
 
 @media (max-width: 744px) {
   .fw500 {
-    font-size: 32px !important;
-  }
-}
-
-@media (max-width: 744px) {
-  .fs40 {
     font-size: 24px !important;
   }
 }
 
 @media (max-width: 744px) {
+  .fs20 {
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 744px) {
+  .fs40 {
+    font-size: 18px !important;
+  }
+}
+
+@media (max-width: 744px) {
   .lh2dot8 {
-    line-height: 3.2 !important;
+    line-height: 2.2 !important;
   }
 }
 
 @media (max-width: 744px) {
   .fs16 {
-    font-size: 16px !important;
+    font-size: 14px !important;
   }
 }
-/*# sourceMappingURL=main.css.map */
+
+@media (max-width: 744px) {
+  .mr8 {
+    margin-right: 4px !important;
+  }
+}
+
+@media (max-width: 744px) {
+  .ml8 {
+    margin-left: 4px !important;
+  }
+}/*# sourceMappingURL=main.css.map */

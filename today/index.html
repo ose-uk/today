@@ -7,7 +7,13 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>今日を知るサイト TODAY</title>
+    <meta name="description" content="今日は西暦何年？元号だと何年？ついつい調べてしまう『今日』の情報をシンプルにまとめたサイトです。日付や年号をすぐに確認したいときにお使いください。">
+    <link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link rel="shortcut icon" href="./favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./site.webmanifest" />
 </head>
 <body>
 
@@ -30,17 +36,12 @@
                     <!-- 西暦-->
                     <div class="mainBlock">
                         <h2>西暦</h2>
-                        <div class="mainBody tdyLargeInfo tdyWesternYear">
-                            <div class="fs56 mr8 font-roboto fw500" id="westernyear"></div>
-                            <div class="lh2dot8">年</div>
-                            <div class="fs56 ml8 mr8 font-roboto fw500 month"></div>
-                            <div class="lh2dot8">月</div>
-                            <div class="fs56 ml8 mr8 font-roboto fw500 day"></div>
-                            <div class="lh2dot8">日</div>
-                          </div>
-                          <div class="tdyDayCounter fwnormal fs12">
+                        <p class="mainBody tdyLargeInfo tdyWesternYear">
+                            <span class="fs56 mr8 font-roboto fw500" id="westernyear"></span><span class="lh2dot8">年</span><span class="fs56 ml8 mr8 font-roboto fw500 month"></span><span class="lh2dot8">月</span><span class="fs56 ml8 mr8 font-roboto fw500 day"></span><span class="lh2dot8">日</span>
+                        </p>
+                        <div class="tdyDayCounter fwnormal fs12">
                             <span id="nextyear"></span>年まで残り<span class="fs16 fw500 font-roboto" id="daysRemaining"></span>日
-                          </div>
+                        </div>
                     </div>
 
                     <div class="column2">
@@ -65,15 +66,9 @@
                     <!-- 和暦 -->
                     <div class="mainBlock">
                         <h2>和暦</h2>
-                        <div class="mainBody tdyLargeInfo tdyJapaneseYear">
-                            <div class="fs40" id="era">令和</div>
-                            <div class="fs56 ml8 mr8 font-roboto fw500" id="japaneseYear"></div>
-                            <div class="lh2dot8">年</div>
-                            <div class="fs56 ml8 mr8 font-roboto fw500 month"></div>
-                            <div class="lh2dot8">月</div>
-                            <div class="fs56 ml8 mr8 font-roboto fw500 day"></div>
-                            <div class="lh2dot8">日</div>
-                        </div>
+                        <p class="mainBody tdyLargeInfo tdyJapaneseYear">
+                            <span class="fs40" id="era">令和</span><span class="fs56 ml8 mr8 font-roboto fw500" id="japaneseYear"></span><span class="lh2dot8">年</span><span class="fs56 ml8 mr8 font-roboto fw500 month"></span><span class="lh2dot8">月</span><span class="fs56 ml8 mr8 font-roboto fw500 day"></span><span class="lh2dot8">日</span>
+                        </p>
                     </div>
 
                     <!-- 祝日 -->
@@ -121,7 +116,7 @@
             <div class="snsContents">
                 <div class="snsHeader"><p>今日のことを共有しよう</p></div>
                 <div class="snsButtons fwnormal fs11">
-                    <a href="https://www.facebook.com/sharer/sharer.php?u=YOUR_URL" target="_blank">
+                    <a href="" id="facebookLink" target="_blank">
                         <button class="snsButton fbButton">
                             <div class="snsLabel">
                                 <img src="./img/fblogo.png" width="18" height="18">
@@ -129,7 +124,7 @@
                             </div>
                         </button>
                     </a>
-                    <a href="https://twitter.com/intent/tweet?url=YOUR_URL&text=YOUR_TEXT" target="_blank">
+                    <a href="" id="xLink" target="_blank">
                         <button class="snsButton tweetButton">
                             <div class="snsLabel">
                                 <img src="./img/xlogo.png" width="15" height="15">
@@ -137,7 +132,7 @@
                             </div>
                         </button>
                     </a>
-                    <a href="https://line.me/R/msg/text/?YOUR_TEXT%20YOUR_URL" target="_blank">
+                    <a href="" id="lineLink" target="_blank">
                         <button class="snsButton lineButton">
                             <div class="snsLabel">
                                 <img src="./img/snslogo.png" width="18" height="18">
@@ -146,7 +141,6 @@
                         </button>
                     </a>
                 </div>
-                
             </div>
         </div>
     </main>
